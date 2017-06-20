@@ -1,0 +1,36 @@
+apply plugin: rootProject.ext.plugin.application
+apply plugin: rootProject.ext.plugin.kotlin
+apply plugin: 'kotlin-android-extensions'
+
+
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile rootProject.ext.dependencies.support
+
+    compile rootProject.ext.dependencies.cameraFragment
+    compile rootProject.ext.dependencies.kotlin
+    compile rootProject.ext.dependencies.rxSensors
+    compile rootProject.ext.dependencies.rxPermissions
+
+    // Rx
+    compile('io.reactivex.rxjava2:rxandroid:2.0.1') {
+        exclude group: 'io.reactivex', module: 'rxjava'
+    }
+
+    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/flContainer_AM"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextClock
+        android:id="@+id/textClock"
+        android:textSize="25sp"
+        android:gravity="top|right"
+        android:layout_margin="30dp"
+        android:layout_gravity="top|right"
+        android:elevation="49dp"
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/glView"
+        android:elevation="4dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</FrameLayout>
