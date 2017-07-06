@@ -10,7 +10,7 @@ import javax.microedition.khronos.opengles.GL10
  */
 class OpenGlRendering : GLSurfaceView.Renderer {
 
-    val shapeModel: Shape by lazy { CubeModel() }
+    val shapeModel: Shape by lazy { AxesModel() }
 
     override fun onDrawFrame(gl: GL10?) {
         gl?.let {
@@ -27,9 +27,9 @@ class OpenGlRendering : GLSurfaceView.Renderer {
 
 
             shapeModel.draw(gl)
-
         }
     }
+
 
     override fun onSurfaceChanged(gl: GL10?, width: Int, height: Int) {
         gl?.glViewport(0, 0, width, height)

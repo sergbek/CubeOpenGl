@@ -17,6 +17,8 @@
         android:layout_margin="30dp"
         android:layout_gravity="top|right"
         android:elevation="49dp"
+        android:format24Hour="HH:mm:ss"
+        android:format12Hour="HH:mm:ss a"
         android:textColor="@color/colorAccent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
